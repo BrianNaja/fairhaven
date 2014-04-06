@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){e(".menu-link").click(function(){e("#menu").toggleClass("hide","show")})});

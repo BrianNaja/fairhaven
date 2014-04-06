@@ -1,0 +1,812 @@
+@import "normalize.scss";
+@import "foundation-typography.scss";
+@import "foundation.scss";
+
+/*!Variables*/
+
+$charcoal: #292727;
+$white: #f2f2f2;
+$green: #27ae60;
+$red: #D24D33;
+$blue: #007bc2;
+$alizarin: #f05d5d;
+/*Variables End*/
+
+@mixin h1-transition {
+  -webkit-transition: background 0.5s ease,
+                                    color 0.2s linear;
+  -moz-transition: background 0.5s ease,
+                                color 0.2s linear;
+  -o-transition: background 0.5s ease,
+                          color 0.2s linear;
+  transition: background 0.5s ease,
+                     color 0.2s linear;
+}
+
+@mixin hover {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@mixin transition {
+  -webkit-transition: width .25s ease;
+  -moz-transition: width .25s ease;
+  -o-transition: width .25s ease;
+  transition: width .25s ease;
+}
+
+@mixin form {
+  outline: none;
+  border: 1px solid lighten($charcoal, 50%);
+  border-radius: 2px;
+  -webkit-box-shadow: 
+      inset 0 1px 2px rgba(0, 0, 0, 0.3);
+ -moz-box-shadow: 
+      inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+      inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  padding: 2px 6px;
+}
+
+.main-header {
+  margin: -10px 0px 0px 0px;
+  padding-bottom: 10px;
+  background-color: rgba(40,38,38,0.90);
+}
+
+.main-footer {
+  background-color: rgba(40,38,38,0.90);
+  padding-top: 10px;
+  margin-top: 26px;
+  border-top: 1px solid #1e1e1e;
+  z-index: -1;
+}
+
+img {
+  max-height: 600px;
+  width: auto;
+}
+
+.alignright {
+  float: right;
+  margin: 10px 0px 10px 10px;
+}
+
+.alignleft {
+  float: left;
+  margin: 10px 10px 10px 0px;
+}
+
+.aligncenter {
+  margin: 0 auto;
+  padding: 10px;
+}
+/*!Video*/
+
+.embed-vimeo, .embed-youtube {
+  position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 0px; /*to remove the black bars*/
+	height: 0;
+	margin: 20px 0px; /*to add space for Disqus comments*/
+}
+
+.embed-vimeo iframe, .embed-youtube iframe {
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.wp-video-shortcode {
+	max-width: 100%;
+}
+
+.wp-audio-shortcode {
+	max-width: 100%;
+}
+
+/*Video End*/
+
+/* !Sidebar */
+
+.sidebar {
+  background: url(images/small.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 0px 20px 20px 20px;
+  min-height: 260px;
+  position: relative; 
+}
+
+@media screen and (min-width: 768px) { /* Medium To Large */
+.sidebar {
+  background: url(images/medium.jpg);
+}
+}
+
+@media only screen and (min-width: 1100px) { /* Large */
+.sidebar {
+  background: url(images/large.jpg);
+}
+}
+
+.widget {
+  margin-top: 10px;
+  padding: 6px 10px 14px 10px;
+  background-color: rgba(40,38,38,0.74);
+}
+
+/* !Sidebar End*/
+
+/* !Footer */
+
+.back-to-top {
+  float: right;
+  margin: 50px 20px 0px 0px;
+}
+
+.back-to-top:hover {
+  border-bottom: 1px solid lighten($blue, 15%);
+  color: lighten($blue, 15%);
+}
+
+/* !Footer End */
+
+/*!Sticky Footer*/
+
+* {
+  margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -110px; 
+}
+
+.wrapper:after {
+  content: "";
+  display: block;
+}
+
+.main-footer, .wrapper:after {
+  /* .push must be the same height as footer */
+  height: 84px; 
+}
+
+/*Sticky Footer End*/
+
+/* !Typography */
+
+body, a, p, li, h1, h2, h3, h4, h5, h6, h7, h8 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+ol, ul{
+  padding-left: 34px;
+}
+
+body {
+  font-size: 1.2em;
+}
+
+aside {
+  color: $white;
+}
+
+.entry-title {
+  font-size: 1.8em;
+}
+
+.main-header h1 {
+  font-size: 2em;
+}
+
+.main-header h2 {
+  font-size: 1em;
+}
+
+.main-header h1, .main-header h2 {
+  margin: 10px 0px 0px 16px;
+}
+
+.widget-title {
+  font-size: 1.1em;
+  color: $white;
+}
+
+/* !Typography End */
+
+/* !Links */
+
+article a, .nav-previous a, .nav-next a, p a {
+  color: $blue;
+}
+
+a:hover, .nav-previous a:hover, .nav-next a:hover, p a:hover {
+  border-bottom: 1px solid darken($blue, 10%);
+  color: darken($blue, 15%);
+}
+
+h1 a:hover {
+  border-bottom: none;
+}
+
+.site-title a, .site-description {
+  color: $white;
+}
+
+.site-description {
+  padding-bottom: 14px;
+}
+
+.site-title a:hover, main-footer a:hover {
+  color: darken($white, 10%);
+}
+
+.category-sermons .entry-title a {
+  background-color: #ffffff; 
+  color: #323232;
+  border-left: 8px solid #f39c12;
+  padding: 0px 8px;
+  @include h1-transition;
+}
+
+.category-sermons .entry-title a:hover {
+  background-color: #f39c12; /* orange */
+  color: $white;
+  padding: 0px 8px;
+}
+
+.category-news .entry-title a {
+  background-color: #ffffff;
+  color: #323232;
+  border-left: 8px solid #95a5a6;
+  padding: 0px 8px;
+  @include h1-transition;
+}
+
+.category-news .entry-title a:hover {
+  background-color: #95a5a6; /* concrete */
+  color: $white;
+  padding: 0px 8px;
+}
+
+.category-events .entry-title a {
+  background-color: #ffffff;
+  color: #323232;
+  border-left: 8px solid #16a085;
+  padding: 0px 8px;
+  @include h1-transition;
+}
+
+.category-events .entry-title a:hover {
+  background-color: #16a085; /* green sea */
+  color: $white;
+  padding: 0px 8px;
+}
+
+.edit-link a {
+  padding: 4px 4px; 
+  margin-left: 10px;
+  background-color: $green;
+  color: $white;
+}
+
+.edit-link a:hover {
+  background-color: darken($green, 10%); 
+  border-bottom: none;
+}
+
+/* !Links End*/
+
+.vcard {
+  display: inline-block;
+  margin: 0 ;
+  border: none;
+  padding: 0;
+}
+
+.vcard li {
+    margin: 0;
+    display: block; 
+}
+
+.vcard .fn {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+/*!Navigation*/
+
+.widget-area {
+  float: right;
+}
+
+a.menu-link {
+    position: absolute;
+    right: 16px;
+    top: 22px;
+    background-color: #2980b9;/* belize */
+    padding: 8px;
+    color: #f9f9f9;
+}
+
+#menu {
+    -webkit-transition: all 1.5s ease;  
+  -moz-transition: all 1.5s ease;
+  -ms-transition: all 1.5s ease;
+  -o-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: inline;
+}
+
+.nav ul {
+  margin: 0px;
+  padding: 0;
+  list-style: none;
+}
+
+.nav li a {
+  display: block;
+  padding: 10px 0px 10px 20px;
+  color: #ffffff;
+}
+
+.nav li a[href*="sermons"] { /* orange */
+  background-color: #f39c12;
+}
+  
+.nav li a[href*="about"] { /* peter river */
+  background-color: #3498db;
+}
+  
+.nav li a[href*="contact"] {/* alizarin */
+  background-color: #f05d5d;
+}
+  
+.nav li a[href*="news"] {/* concrete */
+  background-color: #95a5a6;
+}
+
+.nav li a[href*="events"] {/* green sea */
+  background-color: #16a085;
+}
+
+.nav-previous {
+  float: left;
+  padding: 0px 0px 16px 0px;
+}
+
+.nav-next {
+  float: right;
+}
+
+#nav-below{
+  margin-bottom: 40px;
+}
+
+/*Navigation End*/
+
+/* !Article */
+
+article {
+  margin: 20px 0px 60px 0px;
+}
+
+img {
+  border: 8px solid #f9f9f9;
+  border-radius: 2px;
+  box-shadow: 0px 0px 4px lighten($charcoal, 15%);
+}
+
+.entry-meta {
+  margin-bottom: 20px;
+}
+
+.post-single { /* removes white between header and footer */
+  padding: 2px 0px 20px 0px;
+}
+
+/* Article End */
+
+/*!About */
+#map-canvas {
+  height: 250px;
+  width: 100%;
+  border: 4px solid #e9e9e9;
+  border-radius: 6px;
+  /* -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%); */
+  box-shadow: 0px 0px 4px lighten($charcoal, 15%);
+  margin: 0px auto;
+}
+            
+#map-canvas img {
+  max-width: none;
+  box-shadow: none;
+}
+
+.about-address {
+  text-align: center;
+  margin: 12px;
+    
+}
+
+/*!About End*/
+
+/*!Contact*/
+
+.contact img {
+  margin-bottom: 10px;
+}
+
+.contact {
+  margin-bottom: 30px;
+}
+
+/*Contact End*/
+
+/* !Pages */
+
+.page-template-contact-php {
+  
+}
+
+.page-template-about-php {
+  
+}
+
+/* Pages End */
+
+/*!Form*/ 
+
+input[type=search], input[type=text], input[type=email], input[type=submit], input[type=password] {
+  -webkit-appearance: none;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  @include transition;
+  @include form;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+  border: 1px solid $alizarin;
+  box-shadow: 0 0 2px $alizarin;
+}
+
+.contact-form textarea {
+  @include transition;
+  @include form;
+  width: 99% !important;
+}
+
+textarea:focus {
+  border: 1px solid $alizarin;
+  box-shadow: 0 0 2px $alizarin;
+}
+
+input[type=submit], #comment-submit {
+  @include hover;
+  color: #ffffff;
+  border: none;
+  background-color: $alizarin;
+  outline: none;
+  border-radius: 2px;
+  padding: 6px 10px;
+}
+
+input[type=submit]:focus, input[type=submit]:hover {
+  padding: 6px 20px;
+}
+
+.contact-form label {
+  font-size: 1em !important;
+  font-weight: 200 !important;
+}
+
+.contact-form label span {
+  display: none;
+}
+
+.contact-form {
+  margin: 20px 0px;
+}
+
+.search-form {
+  margin-bottom: 12px;
+}
+
+.widget {
+  margin-top: 20px;
+}
+
+.jetpack_subscription_widget .widget-title {
+  display: none;
+}
+
+.jetpack_subscription_widget input[type=text] {
+  width: 99% !important;
+  @include transition;
+  outline: none;
+  border: 1px solid lighten($charcoal, 50%);
+  border-radius: 2px;
+  -webkit-box-shadow: 
+      inset 0 1px 2px rgba(0, 0, 0, 0.3);
+ -moz-box-shadow: 
+      inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 
+      inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  padding: 2px 6px !important;
+}
+
+.jetpack_subscription_widget input[type=text]:focus  {
+  border: 1px solid rgba(255,144,144,0.94);
+  box-shadow: 0 0 2px rgba(243,14,14,0.66);
+}
+
+.widget_search {
+  padding: 2px 10px 8px 10px;
+  margin: 6px 0px 0px 0px;
+  background-color: lighten($charcoal, 80%);
+}
+
+.jetpack_subscription_widget {
+  padding: 2px 10px;
+  margin: 6px 0px 0px 0px;
+  background-color: rgba(40,38,38,0.74);
+}
+
+aside .search-field {
+  width: 95%;
+  margin-top: 20px;
+  @include transition;
+  @include form;
+}
+
+aside .search-field:focus {
+  border: 1px solid rgba(255,144,144,0.94);
+  box-shadow: 0 0 2px rgba(243,14,14,0.66);
+}
+
+.not-found .search-field {
+  width: 20%;
+  @include transition;
+  @include form;
+}
+
+.not-found .search-field:focus {
+  width: 96%;
+  border: 1px solid rgba(255,144,144,0.94);
+  box-shadow: 0 0 4px rgba(243,14,14,0.66);
+}
+
+/*!Form End*/
+
+
+@media screen and (min-width: 768px) { /* Medium To Large */
+
+/* !Home Page */
+
+.home .main-header {
+  border-bottom: none;
+  width: 100%;
+  position: static;
+  margin-bottom: 140px;
+}
+
+.main-header {
+  background-color: #ffffff;
+}
+
+.main-header h1 {
+  font-size: 2.4em;
+}
+
+.title-description {
+  background-color: rgba(40,38,38,0.90);
+  padding-bottom: 10px;
+  width: 33.333%;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.home .title-description {
+  position: fixed;
+  z-index: 1;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  padding-top: 160px;
+  top: 0px; 
+}
+
+.jetpack_subscription_widget {
+  position: fixed;
+  bottom: 20px;
+  width: 29%;
+}
+
+/* !Home Page End */
+
+/* !Typography */
+
+.main-header h1, .main-header h2 {
+    margin: 10px 0px 0px 20px;
+  }
+  
+.entry-title {
+  font-size: 2.4em;
+}
+
+/* !Typography End*/
+  
+/*!Navigation*/
+  
+  a.menu-link {
+     display: none;
+  }
+  
+  .hide {
+    display: inline; /* displays menu */
+   }
+  
+  .nav {
+    max-width: none;
+    position: absolute;
+    width: auto;
+    right: 14px;
+    top: 10px;
+    max-height: none;
+  }
+  
+  .nav {
+    margin: 24px 20px 20px 0px;
+  }
+  
+  .nav ul {
+    height: 0px;
+    background-color: #ffffff;/* white */
+  }
+  
+  .nav  li {
+    display: inline-block;
+  }
+  
+  .nav li a {
+    border: 0px;
+    padding: 10px 10px 10px 10px;
+    margin-left: 4px;
+  }
+  
+  .nav li a[href*="sermons"] { /* white */
+      background-color: #ffffff;
+      color: #3e3e3e;
+      border-bottom: 2px solid #f39c12;
+  }
+  
+   .nav li a[href*="sermons"]:hover { /* orange */
+      background-color: #f39c12;
+      color: #f9f9f9;
+  }
+
+  /* *********************************************** */
+  .nav li a[href*="about"] { /* white */
+      background-color: #ffffff;
+      color: #3e3e3e;
+      border-bottom: 2px solid #3498db;
+  }
+  
+  .nav li a[href*="about"]:hover { /* peter river */
+      background-color: #3498db;
+      color: #f9f9f9;
+  }
+  /* *********************************************** */
+  .nav li a[href*="contact"] { /* white */
+      background-color: #ffffff;
+      color: #3e3e3e;
+      border-bottom: 2px solid #f05d5d;
+  }
+  
+  .nav li a[href*="contact"]:hover {/* alizarin */
+      background-color: #f05d5d;
+      color: #f9f9f9;
+  }
+  /* *********************************************** */
+  .nav li a[href*="news"] { /* white */
+      background-color: #ffffff;
+      color: #3e3e3e;
+      border-bottom: 2px solid #95a5a6;
+  }
+  
+  .nav li a[href*="news"]:hover {/* concrete */
+      background-color: #95a5a6;
+      color: #f9f9f9;
+  }
+  /* *********************************************** */
+  .nav li a[href*="events"] { /* white */
+      background-color: #ffffff;
+      color: #3e3e3e;
+      border-bottom: 2px solid #16a085;
+  }
+  
+  .nav li a[href*="events"]:hover {/* green sea */
+      background-color: #16a085;
+      color: #f9f9f9;
+  }
+  /* *********************************************** */
+
+/*!Navigation End*/
+
+/*!About */
+  #map-canvas {
+    height: 400px;
+    width: 100%;
+    border: 4px solid #e9e9e9;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px lighten($charcoal, 15%);
+    margin: 10px 0px;
+}
+            
+  #map-canvas img {
+    max-width: none;
+}
+/*!About End*/
+
+/*!Form End*/
+.select {
+  width: 20%;
+}
+
+select {
+  width: 20%;
+}
+/*!Form End*/
+
+/* !Article */
+
+
+
+/* Article End */
+
+}
+
+@media only screen and (min-width: 900px) {
+
+.main-header h2 {
+  font-size: 1.2em;
+}
+
+}
+
+@media only screen and (min-width: 1056px) { /* Large */
+
+/* !Typography */
+
+  .main-header h1, .main-header h2 {
+    margin: 10px 0px 0px 40px;
+  }
+  
+
+/* !Typography End*/
+
+}
+
+
