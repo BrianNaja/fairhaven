@@ -1,5 +1,4 @@
 <div <?php post_class(); ?>>
-<div class="row">
 <article class="large-10 small-centered columns" id="post-<?php the_ID(); ?>">
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
@@ -53,5 +52,4 @@
 		<?php edit_post_link( __( 'Edit This', 'fairhaven' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
-</div>
 </div>
