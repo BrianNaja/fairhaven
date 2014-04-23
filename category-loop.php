@@ -1,5 +1,5 @@
-<div <?php post_class(); ?>>
-<article class="large-10 small-centered columns" id="post-<?php the_ID(); ?>">
+
+<article class="large-10 columns">
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
