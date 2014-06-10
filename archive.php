@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area archive row">
+	<section id="primary" class="content-area archive">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -89,7 +89,7 @@ get_header(); ?>
 
 			<div class="row">
 			  <div class="large-10 small-centered columns" <?php fairhaven_content_nav( 'nav-below' ); ?></div>
-      </div>
+			</div>
 
 		<?php else : ?>
 

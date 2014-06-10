@@ -1,5 +1,5 @@
-
-<article class="large-10 columns">
+<div class="row">
+<article class="large-10 small-centered columns">
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
