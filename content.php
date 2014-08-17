@@ -58,6 +58,6 @@
 
 		<?php edit_post_link( __( 'Edit This', 'fairhaven' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
-</article><!-- #post-## -->
+    </article><!-- #post-## -->
   </div>
 </div>

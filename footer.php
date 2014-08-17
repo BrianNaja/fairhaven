@@ -8,6 +8,7 @@
  */
 ?>
 
+</div><!-- .wrapper nav-flyout -->
 <a href="#" title="To the top of this page" class="back-to-top">&uarr; Back To Top</a>
 <div class="main-footer small-12 small-centered columns">
 	<footer id="colophon" class="site-footer" role="contentinfo">

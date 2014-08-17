@@ -15,7 +15,6 @@
 <title><?php wp_title( '|', true, 'right' ); ?> 2415 Saw Mill Run Blvd, Pittsburgh, PA 15234</title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
 
 <?php wp_head(); ?>
 </head>
@@ -41,6 +40,7 @@
     
 </div>
 
+<div class="wrapper">
 
 
 
