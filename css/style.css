@@ -1616,6 +1616,9 @@ ol, ul {
 body {
   font-size: 1.2em; }
 
+address {
+  font-style: normal; }
+
 aside {
   color: #f2f2f2; }
 
