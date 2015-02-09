@@ -200,6 +200,10 @@ h1, h2, h3, h4, h5, h6{
   color: #4a4545;
 }
 
+ol a, ul a, p a{
+  word-wrap: break-word;
+}
+
 ol, ul{
   padding-left: 34px;
 }
